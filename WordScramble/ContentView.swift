@@ -19,11 +19,13 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack{
+            Text("Enter a subword for \(rootWord) and press enter")
             List{
                 Section{
                     TextField("Enter your word", text: $newWord)
                         .textInputAutocapitalization(.never)
                 }
+               
                 
                 Section {
                     ForEach(usedWords, id:\.self) {
